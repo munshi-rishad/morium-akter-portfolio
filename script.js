@@ -8,7 +8,5 @@ document.querySelectorAll('.reveal').forEach(e=>observer.observe(e));
 const modal=document.getElementById('viewer'), frame=document.getElementById('pdf-frame'), title=document.getElementById('modal-title'), openPdf=document.getElementById('open-pdf');
 function openViewer(file,name){title.textContent=name;frame.src=file+'#view=FitH';openPdf.href=file;modal.classList.add('open');modal.setAttribute('aria-hidden','false');document.body.style.overflow='hidden'}
 function closeViewer(){modal.classList.remove('open');modal.setAttribute('aria-hidden','true');frame.src='';document.body.style.overflow=''}
-document.querySelectorAll('[data-file]').forEach(el=>el.addEventListener('click',()=>openViewer(el.dataset.file,el.dataset.title||'Document')));
-document.getElementById('close').onclick=closeViewer;document.getElementById('close2').onclick=closeViewer;
-document.querySelector('.modal-backdrop').onclick=closeViewer;
-document.addEventListener('keydown',e=>{if(e.key==='Escape')closeViewer()});
+document.querySelectorAll('[data-url]').forEach(el=>el.addEventListener('click',()=>{ if(el.dataset.url && el.dataset.url!='#') window.open(el.dataset.url,'_blank'); }));
+
