@@ -196,3 +196,159 @@ html, body { width:100%; overflow-x:hidden; }
  .cert-actions{margin-top:15px}
  .info-strip{display:block}
 }
+
+
+/* Final mobile standardization fix */
+@media (max-width: 768px){
+    *{
+        max-width:100%;
+    }
+    body{
+        overflow-x:hidden;
+        font-size:15px;
+    }
+
+    .navbar{
+        width:100%;
+        padding:0 16px;
+    }
+
+    .brand{
+        overflow:hidden;
+        text-overflow:ellipsis;
+        max-width:220px;
+    }
+
+    .hero{
+        width:100%;
+        padding-left:18px;
+        padding-right:18px;
+        text-align:left;
+    }
+
+    .hero h1{
+        font-size:32px;
+        word-break:normal;
+    }
+
+    .hero .lead{
+        font-size:15px;
+    }
+
+    .actions{
+        width:100%;
+        gap:10px;
+    }
+
+    .btn{
+        width:100%;
+        min-height:46px;
+    }
+
+    .mini-stats{
+        display:flex;
+        flex-direction:column;
+        gap:12px;
+    }
+
+    .mini-stats div{
+        border-left:0;
+        padding:10px 0;
+        border-bottom:1px solid #CBD5E1;
+    }
+
+    .hero-visual{
+        transform:none;
+        min-height:330px;
+        overflow:hidden;
+    }
+
+    .portrait-frame{
+        width:250px;
+        height:310px;
+    }
+
+    .floating-card.top{
+        right:5px;
+        top:25px;
+        max-width:150px;
+    }
+
+    .floating-card.bottom{
+        left:10px;
+        bottom:20px;
+        max-width:170px;
+    }
+
+    .section{
+        width:100%;
+        padding:55px 18px;
+    }
+
+    .section-heading h2,
+    .quote h2,
+    .contact-section h2{
+        font-size:30px;
+    }
+
+    .about-text .big{
+        font-size:22px;
+    }
+
+    .info-strip{
+        display:flex;
+        flex-direction:column;
+        gap:18px;
+    }
+
+    .edu{
+        display:grid;
+        grid-template-columns:1fr;
+    }
+
+    .edu .line{
+        display:none;
+    }
+
+    .edu h3{
+        font-size:19px;
+    }
+
+    .chips{
+        width:100%;
+    }
+
+    .chips>*{
+        max-width:100%;
+        white-space:normal;
+    }
+
+    .cert-card,
+    .skill-card,
+    .contact-links a,
+    .contact-links div{
+        width:100%;
+        overflow:hidden;
+    }
+
+    .cert-actions{
+        display:flex;
+        flex-direction:column;
+        gap:10px;
+    }
+
+    .modal-box{
+        width:94vw;
+        height:85vh;
+    }
+}
+
+/* Fix mobile browsers showing desktop layout after desktop mode */
+@media (min-width:769px) and (max-width:1100px){
+    .hero{
+        grid-template-columns:1fr;
+    }
+    .hero-visual{
+        margin-top:20px;
+    }
+}
