@@ -352,3 +352,35 @@ html, body { width:100%; overflow-x:hidden; }
         margin-top:20px;
     }
 }
+
+
+/* Professional update additions */
+
+.highlight-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:25px;margin-top:40px}
+.highlight-card{background:white;border-radius:22px;padding:32px;box-shadow:0 15px 40px rgba(0,43,73,.08);border:1px solid rgba(0,43,73,.06);transition:.3s}
+.highlight-card:hover{transform:translateY(-8px)}
+.highlight-card b{font-size:34px}.highlight-card h3{margin:18px 0 8px;color:#002B49}.highlight-card p{color:#64748b;font-size:15px}
+body.dark .navbar{background:rgba(16,24,39,.9)}body.dark .brand,body.dark h1,body.dark h2,body.dark h3{color:#fff}body.dark .section,body.dark .highlight-card,body.dark .skill-card,body.dark .cert-card{background:#172033;color:#e5e7eb}body.dark p{color:#cbd5e1}
+@media(max-width:900px){.highlight-grid{grid-template-columns:1fr}}
+
+
+/* Premium portfolio additions */
+.achievement-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:25px;margin-top:35px}
+.achievement-card{padding:32px;border-radius:24px;background:white;box-shadow:0 18px 45px rgba(0,0,0,.08);text-align:center;transition:.35s}
+.achievement-card:hover{transform:translateY(-10px)}
+.achievement-card strong{display:block;font-size:42px;color:#002B49;margin-bottom:12px}
+.achievement-card span{font-weight:700;font-size:18px;display:block;margin-bottom:10px}
+.achievement-card p{color:#64748b}
+.journey-box{display:flex;align-items:center;justify-content:space-between;gap:30px;padding:40px;border-radius:28px;background:linear-gradient(135deg,#002B49,#0f766e);color:white}
+.journey-box h2{color:white;margin-bottom:12px}
+.journey-box p{color:#e2e8f0;max-width:650px}
+.journey-box .btn{background:white;color:#002B49}
+@media(max-width:900px){.achievement-grid{grid-template-columns:1fr}.journey-box{flex-direction:column;align-items:flex-start}}
+
+/* Additional professional portfolio features */
+.projects-section .project-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:25px;margin-top:40px}
+.project-card{background:#fff;border:1px solid #e6edf3;border-radius:22px;padding:30px;transition:.3s;box-shadow:0 10px 30px rgba(0,43,73,.06)}
+.project-card:hover{transform:translateY(-8px);box-shadow:0 20px 40px rgba(0,43,73,.12)}
+.project-icon{font-size:38px;margin-bottom:18px}.project-card h3{font-size:24px;margin-bottom:12px;color:#002B49}.project-card p{color:#526273;line-height:1.7}.project-card span{display:inline-block;margin-top:15px;padding:7px 14px;border-radius:20px;background:#eef6fb;color:#005A9C;font-size:12px;font-weight:700}
+.whatsapp-float{position:fixed;right:25px;bottom:25px;width:58px;height:58px;border-radius:50%;background:#25D366;color:white;text-decoration:none;display:grid;place-items:center;font-size:28px;z-index:999;box-shadow:0 10px 25px rgba(0,0,0,.2)}
+@media(max-width:900px){.projects-section .project-grid{grid-template-columns:1fr}}
