@@ -10,12 +10,3 @@ function openViewer(file,name){title.textContent=name;frame.src=file+'#view=FitH
 function closeViewer(){modal.classList.remove('open');modal.setAttribute('aria-hidden','true');frame.src='';document.body.style.overflow=''}
 document.querySelectorAll('[data-url]').forEach(el=>el.addEventListener('click',()=>{ if(el.dataset.url && el.dataset.url!='#') window.open(el.dataset.url,'_blank'); }));
 
-
-
-const themeBtn=document.querySelector('.theme-toggle');
-themeBtn?.addEventListener('click',()=>{
- document.body.classList.toggle('dark');
- themeBtn.textContent=document.body.classList.contains('dark')?'☀':'☾';
- localStorage.setItem('theme',document.body.classList.contains('dark')?'dark':'light');
-});
-if(localStorage.getItem('theme')==='dark'){document.body.classList.add('dark');if(themeBtn)themeBtn.textContent='☀';}

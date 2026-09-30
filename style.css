@@ -355,12 +355,12 @@ html, body { width:100%; overflow-x:hidden; }
 
 
 /* Professional update additions */
-.theme-toggle{border:1px solid rgba(0,43,73,.15);background:white;color:#002B49;width:38px;height:38px;border-radius:50%;cursor:pointer;font-size:18px;margin-left:auto;margin-right:20px}
+.theme-toggle{display:none}
 .highlight-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:25px;margin-top:40px}
 .highlight-card{background:white;border-radius:22px;padding:32px;box-shadow:0 15px 40px rgba(0,43,73,.08);border:1px solid rgba(0,43,73,.06);transition:.3s}
 .highlight-card:hover{transform:translateY(-8px)}
 .highlight-card b{font-size:34px}.highlight-card h3{margin:18px 0 8px;color:#002B49}.highlight-card p{color:#64748b;font-size:15px}
-body.dark{background:#101827;color:#e5e7eb}body.dark .navbar{background:rgba(16,24,39,.9)}body.dark .brand,body.dark h1,body.dark h2,body.dark h3{color:#fff}body.dark .section,body.dark .highlight-card,body.dark .skill-card,body.dark .cert-card{background:#172033;color:#e5e7eb}body.dark p{color:#cbd5e1}
+
 @media(max-width:900px){.highlight-grid{grid-template-columns:1fr}.theme-toggle{margin-right:10px}}
 
 
@@ -376,3 +376,86 @@ body.dark{background:#101827;color:#e5e7eb}body.dark .navbar{background:rgba(16,
 .journey-box p{color:#e2e8f0;max-width:650px}
 .journey-box .btn{background:white;color:#002B49}
 @media(max-width:900px){.achievement-grid{grid-template-columns:1fr}.journey-box{flex-direction:column;align-items:flex-start}}
+
+
+/* Final performance and responsive refinement */
+img{
+    max-width:100%;
+    height:auto;
+}
+body{
+    text-rendering:optimizeLegibility;
+}
+.reveal{
+    will-change:auto;
+}
+.achievement-card{
+    padding:28px;
+}
+.achievement-card strong{
+    font-size:36px;
+}
+.achievement-card p,
+.highlight-card p,
+.about-text p{
+    font-weight:400;
+}
+@media(max-width:768px){
+    .navbar{
+        height:64px;
+        padding:0 18px;
+    }
+    .brand{
+        font-size:17px;
+    }
+    .hero{
+        padding:105px 18px 45px;
+        gap:25px;
+        min-height:auto;
+    }
+    .hero h1{
+        font-size:34px;
+        line-height:1.12;
+        margin:16px 0;
+    }
+    .lead{
+        font-size:15px;
+    }
+    .eyebrow{
+        font-size:10px;
+        letter-spacing:1.3px;
+    }
+    .hero-visual{
+        min-height:300px;
+    }
+    .orbit{
+        display:none;
+    }
+    .portrait-frame{
+        width:230px;
+        height:290px;
+    }
+    .floating-card{
+        transform:scale(.9);
+    }
+    .section{
+        padding:55px 18px;
+    }
+    .achievement-card,
+    .skill-card,
+    .cert-card,
+    .highlight-card{
+        padding:22px;
+    }
+}
+/* prevents desktop-mode scaling issues on mobile Chrome */
+@media(min-width:769px) and (max-width:1200px){
+    .hero{
+        padding-left:5%;
+        padding-right:5%;
+        gap:25px;
+    }
+    .hero h1{
+        font-size:48px;
+    }
+}
