@@ -384,3 +384,43 @@ body.dark .navbar{background:rgba(16,24,39,.9)}body.dark .brand,body.dark h1,bod
 .project-icon{font-size:38px;margin-bottom:18px}.project-card h3{font-size:24px;margin-bottom:12px;color:#002B49}.project-card p{color:#526273;line-height:1.7}.project-card span{display:inline-block;margin-top:15px;padding:7px 14px;border-radius:20px;background:#eef6fb;color:#005A9C;font-size:12px;font-weight:700}
 .whatsapp-float{position:fixed;right:25px;bottom:25px;width:58px;height:58px;border-radius:50%;background:#25D366;color:white;text-decoration:none;display:grid;place-items:center;font-size:28px;z-index:999;box-shadow:0 10px 25px rgba(0,0,0,.2)}
 @media(max-width:900px){.projects-section .project-grid{grid-template-columns:1fr}}
+
+/* ===== Final phone responsive repair ===== */
+@media (max-width: 600px){
+  html{scroll-behavior:smooth;width:100%;}
+  body{width:100%;overflow-x:hidden;font-size:15px;}
+  .navbar{position:fixed;top:0;left:0;right:0;height:64px;z-index:999;padding:0 16px;}
+  .brand{font-size:15px;max-width:210px;}
+  .hero{padding:90px 18px 40px;display:flex;flex-direction:column;width:100%;box-sizing:border-box;gap:20px;}
+  .hero-copy{width:100%;}
+  .eyebrow{font-size:10px;line-height:1.5;}
+  .hero h1{font-size:31px!important;line-height:1.18;margin:14px 0;}
+  .hero .lead{font-size:15px!important;line-height:1.65;}
+  .actions,.actions .btn{width:100%;}
+  .btn{box-sizing:border-box;text-align:center;}
+  .mini-stats{display:grid!important;grid-template-columns:1fr!important;width:100%;gap:10px;}
+  .hero-visual{height:350px;min-height:350px!important;transform:none!important;display:flex;justify-content:center;align-items:center;}
+  .portrait-frame{width:240px!important;height:300px!important;}
+  .orbit.one{width:310px!important;height:310px!important;}
+  .floating-card{font-size:11px!important;}
+  .floating-card.top{right:5px!important;top:40px!important;}
+  .floating-card.bottom{bottom:20px!important;left:20px!important;}
+  .section{padding:55px 18px!important;width:100%;box-sizing:border-box;}
+  .section-heading h2,.quote h2,.contact-section h2{font-size:32px!important;}
+  .section-heading p{font-size:14px;line-height:1.5;}
+  .about-text .big{font-size:18px;}
+  .info-strip{display:flex;flex-direction:column;gap:15px;}
+  .edu{display:flex!important;flex-direction:column;gap:8px;padding:20px 0;}
+  .year{font-size:14px!important;}
+  .edu h3{font-size:20px!important;}
+  .edu p{font-size:14px!important;line-height:1.5;}
+  .chips{flex-wrap:wrap;}
+  .highlight-grid,.skill-grid,.cert-grid,.project-grid,.achievement-grid{grid-template-columns:1fr!important;}
+  .highlight-card,.skill-card,.cert-card,.project-card,.achievement-card{width:100%;box-sizing:border-box;}
+  .cert-body{padding:15px;}
+  .cert-actions{padding:12px 15px;}
+  .view-btn{width:100%;}
+  .contact-section{padding:55px 18px!important;}
+  .contact-links a,.contact-links div{display:flex;flex-direction:column;gap:5px;}
+  footer{display:block;text-align:center;padding:18px;font-size:12px;}
+}
