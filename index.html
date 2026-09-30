@@ -3,129 +3,226 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Professional portfolio of Morium Akter, BSS Economics student.">
+<meta name="description" content="Professional portfolio of Morium Akter, BSS (Honours) Economics student at Kabi Nazrul Government College, University of Dhaka.">
+<meta name="theme-color" content="#002B49">
 <title>Morium Akter | Economics Student</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="progress"></div>
-<nav class="navbar">
-  <a class="brand" href="#home"><span>M</span> Morium Akter</a>
-  <button class="menu" aria-label="Open menu"><i></i><i></i><i></i></button>
-  <div class="navlinks">
-    <a class="active" href="#home">Home</a><a href="#about">About</a><a href="#education">Education</a>
-    <a href="#highlights">Highlights</a><a href="#skills">Skills</a><a href="#certificates">Certificates</a><a href="#contact">Contact</a>
-  </div>
-</nav>
+
+<!-- Custom icon set (inline SVG, no external files) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-cert" viewBox="0 0 24 24">
+    <path d="M4 4.5h16a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1h-4.2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M8.2 15H4a1 1 0 0 1-1-1V5.5a1 1 0 0 1 1-1" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M7 8.5h7M7 11.5h4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+    <circle cx="14.5" cy="15.5" r="3.4" fill="none" stroke="currentColor" stroke-width="1.6"/>
+    <path d="m12.9 18.4-.9 3 2.5-1.3 2.5 1.3-.9-3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="i-out" viewBox="0 0 24 24">
+    <path d="M8 16 16 8M9.5 8H16v6.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24">
+    <rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/>
+    <path d="m4 7 8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24">
+    <path d="M6.5 3.5h3l1.4 4-2 1.3a11 11 0 0 0 5.3 5.3l1.3-2 4 1.4v3a2 2 0 0 1-2.2 2A15.5 15.5 0 0 1 4.5 5.7a2 2 0 0 1 2-2.2Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24">
+    <path d="M12 21s6.5-5.6 6.5-11a6.5 6.5 0 0 0-13 0C5.5 15.400 12 21 12 21Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+    <circle cx="12" cy="10" r="2.2" fill="none" stroke="currentColor" stroke-width="1.6"/>
+  </symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24">
+    <path d="M6 3.5h8l4 4V20a.5.5 0 0 1-.5.5h-11A.5.5 0 0 1 6 20V3.5Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+    <path d="M14 3.500V8h4M9 12.500h6M9 16h4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+</svg>
+
+<div class="progress" aria-hidden="true"></div>
+<div class="blobs" aria-hidden="true"><i></i><i></i></div>
+
+<header class="navbar">
+  <a class="brand" href="#home" aria-label="Morium Akter, home"><span class="mark">MA</span><span class="name">Morium Akter</span></a>
+  <button class="menu" aria-label="Open menu" aria-expanded="false" aria-controls="navlinks"><i></i><i></i><i></i></button>
+  <nav class="navlinks" id="navlinks" aria-label="Primary">
+    <a href="#about">About</a>
+    <a href="#education">Education</a>
+    <a href="#skills">Skills</a>
+    <a href="#certificates">Certificates</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
 
 <main>
+<!-- HERO -->
 <section id="home" class="hero">
-  <div class="hero-copy reveal">
-    <div class="eyebrow"><span></span> ECONOMICS • ANALYTICS • PROFESSIONAL DEVELOPMENT</div>
-    <h1>Building a strong foundation in <em>Economics</em> and professional skills.</h1>
-    <p class="lead">Hello, I'm <strong>Morium Akter</strong>, a BSS Economics student focused on analytical thinking, data processing, MS Office and effective communication.</p>
+  <div class="hero-copy">
+    <p class="status"><span class="dot"></span>Open to entry-level opportunities</p>
+    <h1>Morium Akter</h1>
+    <p class="role">BSS (Honours) Economics student, University of Dhaka</p>
+    <p class="typed">Skilled in <b id="typed"></b><span class="caret" aria-hidden="true"></span></p>
+    <p class="lead">Analytical thinking, data processing and clear communication, backed by a consistent academic record and practical MS Office skills.</p>
     <div class="actions">
-      <a class="btn primary" href="https://drive.google.com/file/d/1JwmAOZgmzLsde-KRl3AFx6PIT9ZOUIoV/view?usp=drive_link" target="_blank">View CV <b>↗</b></a>
-      <a class="btn ghost" href="#certificates">Explore Certificates</a>
+      <a class="btn primary" href="https://drive.google.com/file/d/1JwmAOZgmzLsde-KRl3AFx6PIT9ZOUIoV/view?usp=drive_link" target="_blank" rel="noopener">
+        <svg class="ico"><use href="#i-doc"/></svg>View CV
+      </a>
+      <a class="btn ghost" href="#contact">Get in touch</a>
     </div>
-    <div class="mini-stats">
-      <div><strong>3.75</strong><span>Current CGPA</span></div>
-      <div><strong>5.00</strong><span>HSC GPA</span></div>
-      <div><strong>2022</strong><span>University Journey</span></div>
+    <dl class="stats">
+      <div><dt>Current CGPA</dt><dd data-to="3.75" data-dec="2">3.75</dd></div>
+      <div><dt>HSC GPA</dt><dd data-to="5" data-dec="2">5.00</dd></div>
+      <div><dt>Year of study</dt><dd>Third</dd></div>
+    </dl>
+  </div>
+  <figure class="portrait">
+    <div class="frame"><img src="assets/images/morium-akter-profile.jpg" width="800" height="800" alt="Portrait of Morium Akter" fetchpriority="high"></div>
+    <figcaption><b>Kabi Nazrul Government College</b>Affiliated with University of Dhaka</figcaption>
+  </figure>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section">
+  <div class="wrap two">
+    <h2>About</h2>
+    <div class="prose">
+      <p class="big">Driven and detail-oriented, and looking for a growth-oriented organization where I can contribute reliably to team goals.</p>
+      <p>My Economics training is complemented by practical skills in MS Word, Excel and PowerPoint, online research, interpersonal communication, teamwork and time management. I am seeking an entry-level position where I can apply my academic foundation and administrative competence.</p>
     </div>
   </div>
-  <div class="hero-visual reveal">
-    <div class="orbit one"></div><div class="orbit two"></div>
-    <div class="portrait-frame"><img src="assets/images/morium-akter-profile.png" alt="Morium Akter profile photo"></div>
-    <div class="floating-card top"><small>Currently</small><b>BSS Economics</b><span>Third Year Ongoing</span></div>
-    <div class="floating-card bottom"><span class="dot"></span> Open to opportunities</div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education" class="section alt">
+  <div class="wrap">
+    <h2>Education</h2>
+    <ol class="timeline">
+      <li>
+        <span class="when">2022 to present</span>
+        <div class="card current">
+          <h3>BSS (Honours) in Economics</h3>
+          <p>Kabi Nazrul Government College, affiliated with University of Dhaka. Session 2022–2023, third year ongoing.</p>
+          <ul class="chips"><li class="strong">CGPA 3.75</li><li>1st Year GPA 3.83</li><li>2nd Year GPA 3.67</li></ul>
+        </div>
+      </li>
+      <li>
+        <span class="when">2022</span>
+        <div class="card">
+          <h3>Higher Secondary Certificate, Humanities</h3>
+          <p>Government Adamjeenagar M.W. College, Dhaka Board.</p>
+          <div class="row">
+            <ul class="chips"><li class="strong">GPA 5.00 / 5.00</li></ul>
+            <a class="cert-btn" href="https://drive.google.com/file/d/1axWFKUGcLII5cDohfejjAlHID2roBgiW/view?usp=drive_link" target="_blank" rel="noopener" aria-label="View HSC certificate on Google Drive"><svg class="ico"><use href="#i-cert"/></svg><span>View Certificate</span><svg class="ico out"><use href="#i-out"/></svg></a>
+          </div>
+        </div>
+      </li>
+      <li>
+        <span class="when">2020</span>
+        <div class="card">
+          <h3>Secondary School Certificate, Humanities</h3>
+          <p>Shampur Sheikh Mortoza Ali High School, Dhaka Board.</p>
+          <div class="row">
+            <ul class="chips"><li class="strong">GPA 4.89 / 5.00</li></ul>
+            <a class="cert-btn" href="https://drive.google.com/file/d/1qlJhFglhHFzRGvxUdRlYiDC4op74W_60/view?usp=drive_link" target="_blank" rel="noopener" aria-label="View SSC certificate on Google Drive"><svg class="ico"><use href="#i-cert"/></svg><span>View Certificate</span><svg class="ico out"><use href="#i-out"/></svg></a>
+          </div>
+        </div>
+      </li>
+      <li>
+        <span class="when">2017</span>
+        <div class="card">
+          <h3>Junior School Certificate</h3>
+          <p>Kaykarterk Nabab Habib Ulla High School, Dhaka Board.</p>
+          <ul class="chips"><li class="strong">GPA 4.36 / 5.00</li></ul>
+        </div>
+      </li>
+      <li>
+        <span class="when">2014</span>
+        <div class="card">
+          <h3>Primary Education Completion</h3>
+          <p>Al-Amin Bidyapith.</p>
+          <ul class="chips"><li class="strong">GPA 4.58 / 5.00</li></ul>
+        </div>
+      </li>
+    </ol>
   </div>
 </section>
 
-<section id="about" class="section split">
-  <div class="section-heading reveal"><span>01</span><h2>About Me</h2></div>
-  <div class="about-text reveal">
-    <p class="big">Driven, detail-oriented and eager to grow through meaningful professional opportunities.</p>
-    <p>My academic training in Economics is complemented by practical skills in MS Word, MS Excel, PowerPoint, online research, communication, teamwork and time management. I aim to bring these skills into a growth-oriented organization and contribute reliably to team objectives.</p>
-    <div class="info-strip"><div><span>Location</span><b>Kishoreganj, Dhaka, Bangladesh</b></div><div><span>Email</span><b>moriyoma174@gmail.com</b></div></div>
-  </div>
-</section>
-
-<section id="education" class="section">
-  <div class="section-heading reveal"><span>02</span><h2>Education</h2><p>Academic milestones and current progress.</p></div>
-  <div class="timeline">
-    <article class="edu reveal"><div class="year">2022 — Present</div><div class="line"></div><div><h3>BSS (Honours) in Economics</h3><p>Kabi Nazrul Government College, affiliated with University of Dhaka</p><div class="chips"><b>CGPA 3.75</b><span>1st Year GPA 3.83</span><span>2nd Year GPA 3.67</span></div></div></article>
-    <article class="edu reveal"><div class="year">2022</div><div class="line"></div><div><h3>Higher Secondary Certificate</h3><p>Government Adamjeenagar M.W. College • Humanities • Dhaka Board</p><div class="chips"><b>GPA 5.00 / 5.00</b><button class="link-btn" data-url="https://drive.google.com/file/d/1axWFKUGcLII5cDohfejjAlHID2roBgiW/view?usp=drive_link" data-title="HSC Certificate">View Certificate</button></div></div></article>
-    <article class="edu reveal"><div class="year">2020</div><div class="line"></div><div><h3>Secondary School Certificate</h3><p>Shampur Sheikh Mortoza Ali High School • Humanities • Dhaka Board</p><div class="chips"><b>GPA 4.89 / 5.00</b><button class="link-btn" data-url="https://drive.google.com/file/d/1qlJhFglhHFzRGvxUdRlYiDC4op74W_60/view?usp=drive_link" data-title="SSC Certificate">View Certificate</button></div></div></article>
-    <article class="edu reveal"><div class="year">2017</div><div class="line"></div><div><h3>Junior School Certificate</h3><p>Kaykarterk Nabab Habib Ulla High School • Dhaka Board</p><div class="chips"><b>GPA 4.36 / 5.00</b></div></div></article>
-  </div>
-</section>
-
-<section id="highlights" class="section highlights">
-  <div class="section-heading reveal"><span>03</span><h2>Portfolio Highlights</h2><p>Key strengths presented in a simple professional format.</p></div>
-  <div class="highlight-grid">
-    <div class="highlight-card reveal"><b>📊</b><h3>Analytical Mindset</h3><p>Economics background with interest in data interpretation and problem solving.</p></div>
-    <div class="highlight-card reveal"><b>💻</b><h3>Digital Skills</h3><p>MS Office, online research and productivity tools for professional tasks.</p></div>
-    <div class="highlight-card reveal"><b>🤝</b><h3>Professional Growth</h3><p>Focused on communication, teamwork and continuous learning.</p></div>
-  </div>
-</section>
-
-<section id="skills" class="section skills-section">
-  <div class="section-heading reveal"><span>03</span><h2>Skills & Competencies</h2><p>A practical mix of computer and professional skills.</p></div>
-  <div class="skill-grid">
-    <div class="skill-card reveal"><div class="icon">MS</div><h3>MS Office</h3><p>Word • Excel • PowerPoint</p><div class="meter"><i style="width:90%"></i></div></div>
-    <div class="skill-card reveal"><div class="icon">⌕</div><h3>Research</h3><p>Internet browsing & online research</p><div class="meter"><i style="width:82%"></i></div></div>
-    <div class="skill-card reveal"><div class="icon">↗</div><h3>Communication</h3><p>Interpersonal communication</p><div class="meter"><i style="width:84%"></i></div></div>
-    <div class="skill-card reveal"><div class="icon">◎</div><h3>Professional</h3><p>Teamwork • adaptability • time management</p><div class="meter"><i style="width:88%"></i></div></div>
-  </div>
-</section>
-
-<section id="achievements" class="section achievements">
-  <div class="section-heading reveal"><span>04</span><h2>Professional Snapshot</h2><p>Key strengths, academic progress and professional capabilities.</p></div>
-  <div class="achievement-grid">
-    <div class="achievement-card reveal"><strong class="counter">90%</strong><span>MS Office Proficiency</span><p>Advanced document, spreadsheet and presentation skills.</p></div>
-    <div class="achievement-card reveal"><strong class="counter">5.00</strong><span>HSC GPA</span><p>Strong academic performance and consistency.</p></div>
-    <div class="achievement-card reveal"><strong class="counter">10+</strong><span>Learning Activities</span><p>Continuous development through courses and certifications.</p></div>
-  </div>
-</section>
-
-<section class="section journey">
- <div class="journey-box reveal">
-  <div><h2>Career Vision</h2><p>Interested in opportunities where economics, research ability, digital skills and communication can create practical value.</p></div>
-  <a class="btn primary" href="#contact">Connect Now ↗</a>
- </div>
-</section>
-
-<section id="certificates" class="section cert-section">
-  <div class="section-heading reveal"><span>04</span><h2>Certificates</h2><p>All certificates are securely stored on Google Drive. Click the button to view the original certificate.</p></div>
-  <div class="cert-grid">
-    <article class="cert-card reveal"><div class="cert-body"><div class="cert-icon">01</div><div><h3>Basics of Accounting</h3><p>UniAthena • Cambridge International Qualifications</p></div></div><div class="cert-actions"><a class="view-btn" target="_blank" href="https://drive.google.com/file/d/1zT1jQJ7yruCw2VHMHLxNxQ8mI0itYRT9/view?usp=drive_link">View Certificate ↗</a></div></article>
-    <article class="cert-card reveal"><div class="cert-body"><div class="cert-icon">02</div><div><h3>Cyber Hygiene Training</h3><p>The Asia Foundation • SAJIDA Foundation</p></div></div><div class="cert-actions"><a class="view-btn" target="_blank" href="https://drive.google.com/file/d/1l5DGVHalnsO505tT5xYZgho1PL1zpRUH/view?usp=drive_link">View Certificate ↗</a></div></article>
-    <article class="cert-card reveal"><div class="cert-body"><div class="cert-icon">03</div><div><h3>Prevention of Sexual Harassment</h3><p>UniAthena • Cambridge International Qualifications</p></div></div><div class="cert-actions"><a class="view-btn" target="_blank" href="https://drive.google.com/file/d/1_tI9HqFwYaIaJ-7dg8YIlyRQ6ms4kKX6/view?usp=drive_link">View Certificate ↗</a></div></article>
-  </div>
-</section>
-
-<section class="section personality">
-  <div class="quote reveal"><span>05</span><h2>Personal Interests</h2><p>International Football · Sports Analytics · Japanese Animation (Anime) · World Cinema</p></div>
-  <div class="languages reveal"><span>Languages</span><b>Bangla</b><small>Native</small><b>English</b><small>Reading, writing & basic communication</small></div>
-</section>
-
-<section id="contact" class="contact-section">
-  <div class="contact-inner">
-    <div class="reveal"><span class="eyebrow light">LET'S CONNECT</span><h2>Ready to start a new opportunity.</h2><p>For professional communication, feel free to reach out through email or phone.</p></div>
-    <div class="contact-links reveal">
-      <a href="mailto:moriyoma174@gmail.com"><span>Email</span><b>moriyoma174@gmail.com</b> ↗</a>
-      <a href="tel:+8801742067828"><span>Phone</span><b>+880 1742-067828</b> ↗</a>
-      <div><span>Location</span><b>Hossainpur, Kishoreganj, Dhaka, Bangladesh</b></div>
+<!-- SKILLS -->
+<section id="skills" class="section">
+  <div class="wrap">
+    <h2>Skills</h2>
+    <div class="skills">
+      <article>
+        <h3>Computer</h3>
+        <ul class="tags"><li>MS Word</li><li>MS Excel</li><li>MS PowerPoint</li><li>Internet research</li></ul>
+      </article>
+      <article>
+        <h3>Professional</h3>
+        <ul class="tags"><li>Interpersonal communication</li><li>Teamwork</li><li>Time management</li><li>Adaptability</li></ul>
+      </article>
+      <article>
+        <h3>Languages</h3>
+        <ul class="langs">
+          <li><b>Bangla</b><span>Native</span></li>
+          <li><b>English</b><span>Reading, writing and basic communication</span></li>
+        </ul>
+      </article>
+      <article>
+        <h3>Interests</h3>
+        <ul class="tags soft"><li>International football</li><li>Sports analytics</li><li>Japanese animation</li><li>World cinema</li></ul>
+      </article>
     </div>
+  </div>
+</section>
+
+<!-- CERTIFICATES -->
+<section id="certificates" class="section alt">
+  <div class="wrap">
+    <h2>Certifications</h2>
+    <p class="sub">Verified certificates are hosted on Google Drive.</p>
+    <div class="certs">
+      <article class="cert">
+        <time datetime="2026-07">July 2026</time>
+        <h3>Basics of Accounting</h3>
+        <p>UniAthena with Cambridge International Qualifications, UK. Level 7, scored 96/100.</p>
+        <a class="cert-btn" href="https://drive.google.com/file/d/1zT1jQJ7yruCw2VHMHLxNxQ8mI0itYRT9/view?usp=drive_link" target="_blank" rel="noopener" aria-label="View Basics of Accounting certificate on Google Drive"><svg class="ico"><use href="#i-cert"/></svg><span>View Certificate</span><svg class="ico out"><use href="#i-out"/></svg></a>
+      </article>
+      <article class="cert">
+        <time datetime="2026-06">June 2026</time>
+        <h3>Cyber Hygiene Training</h3>
+        <p>The Asia Foundation and SAJIDA Foundation. Digital safety, online threat awareness and privacy practices.</p>
+        <a class="cert-btn" href="https://drive.google.com/file/d/1l5DGVHalnsO505tT5xYZgho1PL1zpRUH/view?usp=drive_link" target="_blank" rel="noopener" aria-label="View Cyber Hygiene certificate on Google Drive"><svg class="ico"><use href="#i-cert"/></svg><span>View Certificate</span><svg class="ico out"><use href="#i-out"/></svg></a>
+      </article>
+      <article class="cert">
+        <time datetime="2026-06">June 2026</time>
+        <h3>Prevention of Sexual Harassment</h3>
+        <p>UniAthena with Cambridge International Qualifications, UK. Level 5, scored 84/100.</p>
+        <a class="cert-btn" href="https://drive.google.com/file/d/1_tI9HqFwYaIaJ-7dg8YIlyRQ6ms4kKX6/view?usp=drive_link" target="_blank" rel="noopener" aria-label="View POSH certificate on Google Drive"><svg class="ico"><use href="#i-cert"/></svg><span>View Certificate</span><svg class="ico out"><use href="#i-out"/></svg></a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+  <div class="wrap two">
+    <div>
+      <h2>Let's talk</h2>
+      <p class="sub">For opportunities and professional enquiries, reach out by email or phone.</p>
+    </div>
+    <ul class="contact-list">
+      <li><a href="mailto:moriyoma174@gmail.com"><svg class="ico"><use href="#i-mail"/></svg><span><small>Email</small>moriyoma174@gmail.com</span></a></li>
+      <li><a href="tel:+8801742067828"><svg class="ico"><use href="#i-phone"/></svg><span><small>Phone</small>+880 1742-067828</span></a></li>
+      <li><div><svg class="ico"><use href="#i-pin"/></svg><span><small>Location</small>Hossainpur, Kishoreganj, Dhaka, Bangladesh</span></div></li>
+    </ul>
   </div>
 </section>
 </main>
 
-<footer><span>© 2026 Morium Akter</span><span>Professional Portfolio</span></footer>
+<footer><span>© 2026 Morium Akter</span><a href="#home">Back to top</a></footer>
 
 <script src="script.js"></script>
 </body>

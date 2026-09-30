@@ -1,13 +1,12 @@
-MORIUM AKTER PROFESSIONAL PORTFOLIO
-=================================
-Open index.html in a modern browser.
+MORIUM AKTER PORTFOLIO
+======================
+Open index.html in any modern browser, or publish with GitHub Pages.
 
-All profile/certificate assets used by the website are included locally.
-Certificate cards have visual previews and an in-site PDF viewer.
-The Drive buttons open the certificate's supplied Google Drive links.
-CV is included at assets/cv.pdf.
+Files: index.html, style.css, script.js, assets/images/morium-akter-profile.jpg
 
-No personal documents such as NID, guardian documents, blood report, vaccine record,
-birth certificate, home records, or unrelated files were included in the website.
+v2 adds: scroll animations, typing line, animated GPA counters, dark mode, score rings on certificates, copy buttons, back-to-top.
 
-https://munshi-rishad.github.io/morium-akter-portfolio/
+All certificates and the CV open through Google Drive links (no PDFs or
+certificate images are stored in this project).
+Personal documents (NID, birth certificate, guardian, family, medical, home
+records) are intentionally NOT included.
