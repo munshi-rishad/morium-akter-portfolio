@@ -9,3 +9,5 @@ CV is included at assets/cv.pdf.
 
 No personal documents such as NID, guardian documents, blood report, vaccine record,
 birth certificate, home records, or unrelated files were included in the website.
+
+https://munshi-rishad.github.io/morium-akter-portfolio/
