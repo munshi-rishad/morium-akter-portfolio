@@ -11,7 +11,5 @@ certificate images are stored in this project).
 Personal documents (NID, birth certificate, guardian, family, medical, home
 records) are intentionally NOT included.
 
-v3: name typewriter (Playfair Display), standard heading size, compact mobile cards, smaller round profile photo,
-auto-scaling for phones using Chrome "Desktop site" mode.
-
-https://munshi-rishad.github.io/morium-akter-portfolio/
+v3: name typewriter (Playfair Display), standard heading size, compact mobile cards, smaller round profile photo.
+v4: removed Desktop-site hack; phone shows mobile layout by default, "Desktop site" shows the real desktop layout.

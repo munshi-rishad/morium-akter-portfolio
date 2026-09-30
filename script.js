@@ -84,7 +84,7 @@ map.forEach((_, id) => { const s = document.getElementById(id); if (s) io.observ
   });
 
   // Typing line
-  const ty = $('#typed'), words = ['analytical thinking', 'data processing', 'clear communication', 'MS Office'];
+  const ty = $('#typed'), words = ['Analytical Thinking', 'Data Processing', 'Clear Communication', 'MS Office'];
   if (ty) {
     if (reduce) ty.textContent = words[0];
     else {
