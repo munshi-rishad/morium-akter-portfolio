@@ -12,3 +12,10 @@ document.querySelectorAll('[data-url]').forEach(el=>el.addEventListener('click',
 
 
 
+const themeBtn=document.querySelector('.theme-toggle');
+themeBtn?.addEventListener('click',()=>{
+ document.body.classList.toggle('dark');
+ themeBtn.textContent=document.body.classList.contains('dark')?'☀':'☾';
+ localStorage.setItem('theme',document.body.classList.contains('dark')?'dark':'light');
+});
+if(localStorage.getItem('theme')==='dark'){document.body.classList.add('dark');if(themeBtn)themeBtn.textContent='☀';}
