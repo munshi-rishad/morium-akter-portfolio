@@ -2,14 +2,21 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="description" content="Professional portfolio of Morium Akter, BSS (Honours) Economics student at Kabi Nazrul Government College, University of Dhaka.">
 <meta name="theme-color" content="#002B49">
 <title>Morium Akter | Economics Student</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Playfair+Display:wght@600;700&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<script>
+/* Phone + Chrome "Desktop site": layout is ~980px wide and shrunk to fit, so scale UI up (k) and use the compact mobile layout */
+(function(){var d=document.documentElement,s=Math.min(screen.width,screen.height),w=innerWidth,
+sc=window.visualViewport?visualViewport.scale:1,coarse=matchMedia('(pointer:coarse)').matches,k=0;
+if(s<=700&&w>s*1.35)k=w/s;else if(coarse&&sc<.75)k=1/sc;
+if(k){d.classList.add('pdm');d.style.setProperty('--k',k.toFixed(3));}})();
+</script>
 </head>
 <body>
 
@@ -62,7 +69,7 @@
 <section id="home" class="hero">
   <div class="hero-copy">
     <p class="status"><span class="dot"></span>Open to entry-level opportunities</p>
-    <h1>Morium Akter</h1>
+    <h1 aria-label="Morium Akter"><span class="tw" aria-hidden="true"></span><span class="caret name-caret" aria-hidden="true"></span></h1>
     <p class="role">BSS (Honours) Economics student, University of Dhaka</p>
     <p class="typed">Skilled in <b id="typed"></b><span class="caret" aria-hidden="true"></span></p>
     <p class="lead">Analytical thinking, data processing and clear communication, backed by a consistent academic record and practical MS Office skills.</p>

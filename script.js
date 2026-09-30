@@ -120,3 +120,17 @@ map.forEach((_, id) => { const s = document.getElementById(id); if (s) io.observ
     li.append(b);
   });
 })();
+
+// Name typewriter
+(() => {
+  const tw = document.querySelector('.tw'), cr = document.querySelector('.name-caret'), full = 'Morium Akter';
+  if (!tw) return;
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) { tw.textContent = full; cr.remove(); return; }
+  let i = 0;
+  const go = () => {
+    tw.textContent = full.slice(0, ++i);
+    if (i < full.length) setTimeout(go, 110 + Math.random() * 60);
+    else setTimeout(() => cr.style.display = 'none', 2500);
+  };
+  setTimeout(go, 500);
+})();

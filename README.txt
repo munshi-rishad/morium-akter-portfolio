@@ -10,3 +10,6 @@ All certificates and the CV open through Google Drive links (no PDFs or
 certificate images are stored in this project).
 Personal documents (NID, birth certificate, guardian, family, medical, home
 records) are intentionally NOT included.
+
+v3: name typewriter (Playfair Display), standard heading size, compact mobile cards, smaller round profile photo,
+auto-scaling for phones using Chrome "Desktop site" mode.
