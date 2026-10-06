@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://munshi-rishad.github.io/morium-akter-portfolio/sitemap.xml
