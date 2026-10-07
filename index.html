@@ -22,7 +22,7 @@
 <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
 <link rel="preload" as="image" href="assets/images/morium-akter-profile.webp" type="image/webp">
 <link rel="preload" as="font" href="assets/fonts/figtree-latin.woff2" type="font/woff2" crossorigin>
-<script>document.documentElement.classList.add('js');</script>
+<script>document.documentElement.classList.add('js');setTimeout(function(){if(!window.__ready)document.documentElement.classList.remove('js')},4000);</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","name":"Morium Akter | Portfolio","url":"https://munshi-rishad.github.io/morium-akter-portfolio/","inLanguage":"en"},{"@type":"Person","name":"Morium Akter","jobTitle":"BSS (Honours) Economics student","url":"https://munshi-rishad.github.io/morium-akter-portfolio/","image":"https://munshi-rishad.github.io/morium-akter-portfolio/assets/images/morium-akter-profile.webp","alumniOf":{"@type":"CollegeOrUniversity","name":"Kabi Nazrul Government College, University of Dhaka"},"knowsAbout":["Economics","Data processing","MS Office","Research"]}]}</script>
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -56,7 +56,6 @@
       <a href="#home">Home</a><a href="#about">About</a><a href="#education">Education</a><a href="#performance">Results</a><a href="#skills">Skills</a><a href="#software">Tools</a><a href="#certificates">Certificates</a><a href="#contact">Contact</a>
     </nav>
     <div class="nav-tools">
-      <button class="icon-btn" id="cmd" type="button" aria-label="Quick search (Ctrl K)"><svg class="i" aria-hidden="true"><use href="#i-search"/></svg></button>
       <button class="icon-btn burger" id="burger" type="button" aria-controls="menu" aria-expanded="false" aria-label="Open menu"><svg class="i" aria-hidden="true"><use href="#i-menu"/></svg></button>
     </div>
   </div>
@@ -72,17 +71,34 @@
       <h1 id="hero-title" aria-label="Morium Akter"><span id="typed-name" data-text="Morium Akter"></span><span class="name-caret" aria-hidden="true"></span></h1>
       <div class="cta">
         <a class="btn btn-primary" href="https://drive.google.com/file/d/1JwmAOZgmzLsde-KRl3AFx6PIT9ZOUIoV/view?usp=drive_link" target="_blank" rel="noopener noreferrer"><svg class="i" aria-hidden="true"><use href="#i-doc"/></svg>View CV <svg class="i" aria-hidden="true"><use href="#i-ext"/></svg></a>
-        <a class="btn btn-primary" href="#certificates">Certificates</a>
         <a class="btn" href="#contact">Get in touch</a>
       </div>
       <svg class="chart-bg" viewBox="0 0 560 380" aria-hidden="true" focusable="false">
-          <g class="ax"><path d="M50 20V330H530"/><path d="M50 20l-5 9M50 20l5 9M530 330l-9-5M530 330l-9 5"/></g>
-          <g class="guide"><path d="M50 220H204V330"/></g>
-          <path class="dem" pathLength="1" d="M70 50C120 210 260 275 500 305"/>
-          <path class="sup" pathLength="1" d="M70 310C170 290 220 150 500 40"/>
-          <circle class="eq-ring" cx="204" cy="220" r="6"/>
-          <circle class="eq" cx="204" cy="220" r="6"/>
-          <g class="lbl"><text x="30" y="26">P</text><text x="534" y="352">Q</text><text x="22" y="225">P*</text><text x="196" y="352">Q*</text><text x="506" y="304">D</text><text x="506" y="48">S</text><text x="216" y="210">E</text></g>
+          <defs>
+            <linearGradient id="gDem" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0E3B2B"/><stop offset="1" stop-color="#2E8F68"/></linearGradient>
+            <linearGradient id="gSup" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#7CCBA3"/><stop offset="1" stop-color="#1F7A5A"/></linearGradient>
+            <linearGradient id="gCs" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#34B27E" stop-opacity=".30"/><stop offset="1" stop-color="#34B27E" stop-opacity=".06"/></linearGradient>
+            <linearGradient id="gPs" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#2E8F68" stop-opacity=".30"/><stop offset="1" stop-color="#2E8F68" stop-opacity=".06"/></linearGradient>
+          </defs>
+          <rect class="panel" x="6" y="6" width="548" height="368" rx="30"/>
+          <g class="ticks"><path d="M70 100H76M70 160H76M70 280H76M130 320V314M290 320V314M370 320V314M450 320V314"/></g>
+          <g class="ax"><path d="M70 40V320H528"/><path d="M70 40l-5 10M70 40l5 10M528 320l-10-5M528 320l-10 5"/></g>
+          <path class="cs" d="M70 58 C99.5 129.4 146.6 182.7 210 222 L70 222 Z"/>
+          <path class="ps" d="M70 222 L210 222 C161.1 262 120.9 293.6 70 300 Z"/>
+          <g class="guide"><path d="M70 222H210V320"/></g>
+          <path class="dem" pathLength="1" d="M70 58 C135 215 285 285 505 306"/>
+          <path class="sup" pathLength="1" d="M70 300 C190 285 250 130 505 52"/>
+          <circle class="eq-ring" cx="210" cy="222" r="9"/>
+          <circle class="eq-halo" cx="210" cy="222" r="15"/>
+          <circle class="eq" cx="210" cy="222" r="7"/>
+          <g class="end"><circle cx="522" cy="306" r="13"/><circle cx="522" cy="52" r="13"/></g>
+          <g class="lbl">
+            <text x="54" y="48" text-anchor="end">P</text><text x="540" y="344">Q</text>
+            <text x="60" y="227" text-anchor="end">P*</text><text x="210" y="342" text-anchor="middle">Q*</text>
+            <text class="e" x="226" y="214">E</text>
+            <text class="se" x="98" y="190">CS</text><text class="se" x="104" y="264">PS</text>
+            <text class="endt" x="522" y="311" text-anchor="middle">D</text><text class="endt" x="522" y="57" text-anchor="middle">S</text>
+          </g>
         </svg>
     </div>
     <div class="badge-wrap" aria-label="Profile photo of Morium Akter">
@@ -234,13 +250,6 @@
 <section class="sec" id="certificates" aria-labelledby="cert-h">
   <div class="wrap">
     <div class="sec-head"><h2 id="cert-h">Certifications and training</h2><p>Tap a certificate to view it.</p></div>
-    <div class="filters" role="group" aria-label="Filter certificates by category" data-target=".cert">
-      <button type="button" data-filter="all" aria-pressed="true">All</button>
-      <button type="button" data-filter="finance" aria-pressed="false">Accounting</button>
-      <button type="button" data-filter="safety" aria-pressed="false">Digital safety</button>
-      <button type="button" data-filter="workplace" aria-pressed="false">Workplace</button>
-    </div>
-    <p class="sr" role="status" aria-live="polite"></p>
     <div class="grid certs" data-stagger>
       <article class="card cert" data-cat="finance" data-score="96">
         <a class="cert-media" href="assets/images/certificates/basics-of-accounting.webp" target="_blank" rel="noopener noreferrer" aria-label="View Basics of Accounting certificate">

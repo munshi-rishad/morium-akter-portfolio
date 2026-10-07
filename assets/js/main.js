@@ -1,5 +1,6 @@
 (() => {
   'use strict';
+  window.__ready = true;
   const $ = (s, c = document) => c.querySelector(s);
   const $$ = (s, c = document) => [...c.querySelectorAll(s)];
   const root = document.documentElement;
@@ -67,18 +68,22 @@
     }
   }
 
-  /* ---------- hanging ID badge: follows the pointer, swings freely otherwise ---------- */
-  if (fine && !reduce) {
-    const bw = $('.badge-wrap');
-    if (bw) {
-      bw.addEventListener('pointermove', e => {
-        const r = bw.getBoundingClientRect();
-        const x = (e.clientX - r.left) / r.width - .5;
-        bw.style.setProperty('--sw', `${(x * 9).toFixed(2)}deg`);
-        bw.classList.add('touched');
-      });
-      bw.addEventListener('pointerleave', () => { bw.classList.remove('touched'); bw.style.removeProperty('--sw'); });
-    }
+  /* ---------- hanging ID badge: swings on its own, follows a finger or the mouse ---------- */
+  const bw = $('.badge-wrap');
+  if (bw) {
+    let bx = 0, braf = 0;
+    const apply = () => {
+      braf = 0;
+      const r = bw.getBoundingClientRect();
+      const x = Math.max(-.6, Math.min(.6, (bx - r.left) / r.width - .5));
+      bw.style.setProperty('--sw', `${(x * 16).toFixed(2)}deg`);
+      bw.classList.add('touched');
+    };
+    const tilt = e => { bx = e.clientX; if (!braf) braf = requestAnimationFrame(apply); };
+    const rest = () => { cancelAnimationFrame(braf); braf = 0; bw.classList.remove('touched'); bw.style.removeProperty('--sw'); };
+    bw.addEventListener('pointerdown', tilt, { passive: true });
+    bw.addEventListener('pointermove', e => { if (e.pointerType !== 'mouse' || fine) tilt(e); }, { passive: true });
+    ['pointerup', 'pointercancel', 'pointerleave'].forEach(t => bw.addEventListener(t, rest, { passive: true }));
   }
 
   /* ---------- skill marquee built from the skill chips ---------- */
@@ -153,7 +158,7 @@
     const base = 'https://abacus.jasoncameron.dev', ns = 'munshi-rishad.github.io', key = 'morium-portfolio-views';
     const local = /^(localhost|127\.|0\.0\.0\.0|\[::1\])/.test(location.hostname) || location.protocol === 'file:';
     const seen = (() => { try { return localStorage.getItem('viewed-morium') === '1'; } catch (e) { return false; } })();
-    const call = kind => fetch(`${base}/${kind}/${ns}/${key}`).then(r => {
+    const call = kind => fetch(`${base}/${kind}/${ns}/${key}`, { signal: window.AbortSignal && AbortSignal.timeout ? AbortSignal.timeout(5000) : undefined }).then(r => {
       if (r.status === 404) return null;
       if (!r.ok) throw 0;
       return r.json().then(d => { if (typeof d.value !== 'number') throw 0; return d.value; });
@@ -174,22 +179,32 @@
 
   /* ---------- cursor glow + magnetic primary buttons (desktop only) ---------- */
   if (fine) {
+    let gc = null, gx = 0, gy = 0, graf = 0;
     document.addEventListener('pointermove', e => {
       const card = e.target.closest && e.target.closest('.card');
       if (!card) return;
-      const r = card.getBoundingClientRect();
-      card.style.setProperty('--mx', `${e.clientX - r.left}px`);
-      card.style.setProperty('--my', `${e.clientY - r.top}px`);
+      gc = card; gx = e.clientX; gy = e.clientY;
+      if (graf) return;
+      graf = requestAnimationFrame(() => {
+        graf = 0;
+        const r = gc.getBoundingClientRect();
+        gc.style.setProperty('--mx', `${gx - r.left}px`);
+        gc.style.setProperty('--my', `${gy - r.top}px`);
+      });
     }, { passive: true });
     if (!reduce) {
       $$('.btn-primary').forEach(b => {
+        let mx = 0, my = 0, braf = 0;
         b.addEventListener('pointermove', e => {
-          const r = b.getBoundingClientRect();
-          const x = (e.clientX - r.left - r.width / 2) / r.width;
-          const y = (e.clientY - r.top - r.height / 2) / r.height;
-          b.style.translate = `${x * 8}px ${y * 6}px`;
-        });
-        b.addEventListener('pointerleave', () => { b.style.translate = ''; });
+          mx = e.clientX; my = e.clientY;
+          if (braf) return;
+          braf = requestAnimationFrame(() => {
+            braf = 0;
+            const r = b.getBoundingClientRect();
+            b.style.translate = `${((mx - r.left - r.width / 2) / r.width) * 8}px ${((my - r.top - r.height / 2) / r.height) * 6}px`;
+          });
+        }, { passive: true });
+        b.addEventListener('pointerleave', () => { b.style.translate = ''; }, { passive: true });
       });
     }
   }

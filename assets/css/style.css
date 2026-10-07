@@ -98,7 +98,7 @@ svg.i{width:20px;height:20px;flex:none;fill:none;stroke:currentColor;stroke-widt
 .chart-bg .dem,.chart-bg .sup{stroke-width:3;stroke-dasharray:1;stroke-dashoffset:1;animation:draw 2.2s .9s cubic-bezier(.4,.1,.2,1) forwards}
 .chart-bg .sup{animation-delay:1.3s;color:var(--blue)}
 .chart-bg .eq{fill:var(--amber)}
-.chart-bg .eq-ring{fill:none;stroke:var(--amber);stroke-width:2;transform-box:fill-box;transform-origin:center;animation:ping-svg 2.4s 2.6s ease-out infinite}
+.chart-bg .eq-ring{fill:none;stroke:var(--amber);stroke-width:2;transform-box:fill-box;transform-origin:center;animation:ping-svg 2.4s 2.6s ease-out 4}
 .chart-bg .lbl text{font:600 15px var(--f-mono);fill:var(--muted)}
 
 /* lanyard ID badge */
@@ -163,7 +163,7 @@ svg.i{width:20px;height:20px;flex:none;fill:none;stroke:currentColor;stroke-widt
 .row.current{background:var(--amber-soft)}
 .yr{font:600 1.9rem/1 var(--f-display);color:var(--head)}
 .yr small{display:block;margin-top:8px;font:600 11.5px/1 var(--f-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
-.row.current .yr small::before{content:"";display:inline-block;width:7px;height:7px;margin-right:7px;border-radius:50%;background:var(--amber);animation:ping 2.2s ease-out infinite}
+.row.current .yr small::before{content:"";display:inline-block;width:7px;height:7px;margin-right:7px;border-radius:50%;background:var(--amber);animation:ping 2.2s ease-out 4}
 .row-main h3{font-size:21px}
 .where{margin-top:6px;color:var(--muted);font-size:16px}
 .tl-meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
@@ -538,9 +538,6 @@ svg.i{stroke-width:1.7}
   #skills .langs li{flex-direction:column;gap:1px}
   #skills .langs li span{text-align:left}}
 
-/* performance: no infinite badge swing on phones/tablets, lighter paint */
-@media (max-width:899px){.swing{animation:none;rotate:0deg}}
-.card,.btn,.chip{backface-visibility:hidden}
 
 /* ==========================================================
    Fixes: 3 certificates per row, graph beside the badge (no overlap),
@@ -570,8 +567,6 @@ svg.i{stroke-width:1.7}
 #skills .soft-chips .chip{background:#E0F2E7;border-color:#B5D8C5;color:#134E3A}
 #skills .soft-chips .chip:hover{background:#CBE7D6;border-color:#5FB88F;color:#165C44}
 
-/* the page now opens in desktop width on phones, so keep the badge still on touch screens (as before) */
-@media (hover:none) and (pointer:coarse){.swing{animation:none;rotate:0deg}}
 
 /* ==========================================================
    Lighter sky blue + nicer icons
@@ -612,12 +607,12 @@ svg.i{stroke-width:1.7}
 .tool img{width:40px;height:40px;border-radius:12px;filter:drop-shadow(0 6px 8px rgba(30,100,70,.28))}
 
 /* ==========================================================
-   Advanced: certificate lightbox, quick-jump palette, tilt, contact actions
+   Advanced: certificate lightbox, tilt, contact actions
    ========================================================== */
-dialog.lb,dialog.pal{border:0;padding:0;background:transparent;color:var(--text);max-width:none;max-height:none;overflow:visible}
-dialog.lb::backdrop,dialog.pal::backdrop{background:rgba(8,32,22,.72);backdrop-filter:blur(6px)}
+dialog.lb{border:0;padding:0;background:transparent;color:var(--text);max-width:none;max-height:none;overflow:visible}
+dialog.lb::backdrop{background:rgba(8,32,22,.84)}
 .lb{width:min(96vw,1100px);margin:auto}
-.lb-box,.pal-box{position:relative;border-radius:22px;background:var(--surface);box-shadow:var(--soft-up);overflow:hidden;animation:lbin .28s ease}
+.lb-box{position:relative;border-radius:22px;background:var(--surface);box-shadow:var(--soft-up);overflow:hidden;animation:lbin .28s ease}
 .lb-view{max-height:76vh;overflow:auto;background:var(--surface-2)}
 .lb-view img{width:100%;height:auto;cursor:zoom-in}
 .lb.zoom .lb-view img{width:200%;max-width:none;cursor:zoom-out}
@@ -625,14 +620,7 @@ dialog.lb::backdrop,dialog.pal::backdrop{background:rgba(8,32,22,.72);backdrop-f
 .lb-cap{flex:1;font:600 16px var(--f-display);color:var(--head)}
 .lb-cap small{display:block;margin-top:2px;font:500 12px var(--f-mono);letter-spacing:.06em;color:var(--muted)}
 .lb-bar .icon-btn{font-size:22px;line-height:1}
-.pal{width:min(92vw,560px);margin:12vh auto auto}
-.pal input{width:100%;border:0;border-bottom:1px solid var(--border);padding:18px 20px;font:500 17px var(--f-body);background:transparent;color:var(--text);outline:0}
-.pal ul{max-height:50vh;overflow:auto;padding:8px}
-.pal li{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:11px 14px;border-radius:12px;cursor:pointer;font-weight:600;color:var(--head)}
-.pal li small{font:500 11.5px var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
-.pal li[aria-selected=true]{background:var(--tag-bg)}
-.pal-foot{padding:9px 16px;border-top:1px solid var(--border);font:500 11.5px var(--f-mono);color:var(--muted)}
-.cert-media img{transition:transform .25s ease;will-change:transform}
+.cert-media img{transition:transform .25s ease}
 .contact-intro .cta{margin-top:var(--s3)}
 @keyframes lbin{from{opacity:0;transform:translateY(14px) scale(.97)}}
 
@@ -662,12 +650,9 @@ dialog.lb::backdrop,dialog.pal::backdrop{background:rgba(8,32,22,.72);backdrop-f
 .tile{display:flex;justify-content:space-between;align-items:baseline;padding:16px 20px;border-radius:16px;background:var(--tag-bg);border:1px solid var(--border)}
 .tile span{font:600 12.5px var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
 .tile b{font:600 2rem/1 var(--f-display);color:var(--head)}
-.dots{position:fixed;right:14px;top:50%;translate:0 -50%;z-index:80;display:flex;flex-direction:column;gap:12px}
-.dots a{width:11px;height:11px;border-radius:50%;border:2px solid var(--primary);transition:.2s}
-.dots a.on{background:var(--primary);scale:1.35}
 @keyframes aurora{to{rotate:360deg}}
-@media (max-width:899px){.perf{grid-template-columns:1fr}.dots{display:none}}
-@media print{.nav,.dots,.to-top,.marquee,.icon-btn,.cta,dialog{display:none!important}body{background:#fff}body::before{display:none}.sec,.about{padding-block:16px}.js .reveal{opacity:1!important;transform:none!important}}
+@media (max-width:899px){.perf{grid-template-columns:1fr}}
+@media print{.nav,.to-top,.marquee,.icon-btn,.cta,dialog{display:none!important}body{background:#fff}body::before{display:none}.sec,.about{padding-block:16px}.js .reveal{opacity:1!important;transform:none!important}}
 
 
 /* hero: top labels removed, highlight chips added */
@@ -702,3 +687,44 @@ dialog.lb::backdrop,dialog.pal::backdrop{background:rgba(8,32,22,.72);backdrop-f
 .iam{margin:0 0 6px;font:600 1.15rem/1.2 var(--f-body);letter-spacing:.04em;color:var(--primary)}
 .hero-copy .cta{margin-top:var(--s4)}
 @media (min-width:900px){.hero-copy{padding-top:96px}}
+
+/* ==========================================================
+   Update: lone "View CV" + "Get in touch" buttons, ID badge motion on touch,
+   nicer supply & demand graph
+   ========================================================== */
+@media (max-width:639px){.cta .btn{grid-column:1/-1}}
+
+/* ID badge: swings on phones too, and a finger can push it sideways */
+.badge-wrap{touch-action:pan-y;cursor:grab;-webkit-tap-highlight-color:transparent}
+.swing{will-change:rotate}
+@media (prefers-reduced-motion:no-preference){.swing{animation:swing 6.5s ease-in-out infinite}.badge-wrap.touched .swing{animation:none}}
+
+/* supply & demand graph */
+.hero-copy .chart-bg{width:min(100%,430px);margin-top:var(--s4);overflow:hidden;border-radius:24px;box-shadow:0 26px 40px -26px rgba(22,92,68,.5);contain:paint;transform:translateZ(0)}
+.chart-bg .panel{fill:rgba(255,255,255,.74);stroke:#B5D8C5;stroke-width:1.5}
+.chart-bg .ticks path{fill:none;stroke:#B5D8C5;stroke-width:1.5;stroke-linecap:round}
+.chart-bg .ax{stroke-width:2.2;color:#7FB89A}
+.chart-bg .ax path{fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round}
+.chart-bg .guide{stroke-width:1.6;color:#5FB88F}
+.chart-bg .dem,.chart-bg .sup{stroke-width:4.5}
+.chart-bg .dem{stroke:url(#gDem)}
+.chart-bg .sup{stroke:url(#gSup)}
+.chart-bg .cs{fill:url(#gCs)}
+.chart-bg .ps{fill:url(#gPs)}
+.chart-bg .cs,.chart-bg .ps{opacity:0;animation:cfade 1.1s 2.7s ease forwards}
+.chart-bg .eq{fill:#165C44;stroke:#fff;stroke-width:3}
+.chart-bg .eq-halo{fill:rgba(52,178,126,.2);transform-box:fill-box;transform-origin:center;}
+.chart-bg .eq-ring{stroke:#34B27E}
+.chart-bg .end circle{fill:#fff;stroke:#B5D8C5;stroke-width:1.5}
+.chart-bg .lbl text{font:700 15px var(--f-mono);fill:#4D6E5E}
+.chart-bg .lbl .e{font-size:17px;fill:#0E3B2B}
+.chart-bg .lbl .se{font-size:13px;letter-spacing:.08em;fill:#165C44;opacity:0;animation:cfade 1s 3.1s ease forwards}
+.chart-bg .lbl .endt{font-size:14px;fill:#0E3B2B}
+@keyframes cfade{to{opacity:1}}
+@media (prefers-reduced-motion:reduce){.chart-bg .cs,.chart-bg .ps,.chart-bg .lbl .se{opacity:1;animation:none}}
+
+/* ==========================================================
+   Smoothness: fewer repaints, no heavy filters, no looping that never stops
+   ========================================================== */
+.hero,.marquee,.badge-wrap{contain:layout style}
+.hero{contain:layout style paint}

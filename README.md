@@ -37,5 +37,5 @@ Pages: Settings > Pages > `main` / `(root)`.
 Personal documents (NID, birth certificate, family, medical, home records) are intentionally not included.
 
 ## Advanced features
-Certificate lightbox (arrows, swipe, zoom), quick-jump palette (Ctrl/Cmd+K or the search button), Save contact (.vcf) and Share buttons, 3D tilt on certificates, installable offline app (`manifest.webmanifest`, `sw.js`, https only), schema.org JSON-LD. Code: `assets/js/extra.js`. After editing files, bump `V` in `sw.js`.
-Also: Academic results chart, side section dots, Dhaka local time, message form (mailto), print styles. Colours are the deeper sky blue set in `style.css`.
+Certificate lightbox (arrows, swipe, zoom), Save contact (.vcf) and Share buttons, 3D tilt on certificates, installable offline app (`manifest.webmanifest`, `sw.js`, https only), schema.org JSON-LD. Code: `assets/js/extra.js`. After editing files, bump `V` in `sw.js`.
+Also: Academic results chart, Dhaka local time, message form (mailto), print styles. Colours are the deeper sky blue set in `style.css`.
