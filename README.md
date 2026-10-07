@@ -6,21 +6,21 @@ Live: https://munshi-rishad.github.io/morium-akter-portfolio/
 ## Structure
 ```
 index.html, 404.html, robots.txt, sitemap.xml
-assets/  css/  js/  fonts/  images/  icons/  docs/certificates/
+assets/  css/  js/  fonts/  images/  icons/
 ```
 
 ## Design
 "Economics journal" look: graph-paper hero with an animated supply and demand chart, a swinging lanyard ID badge for the photo, ledger-style education rows, an indexed skills list, a single toolbar for tools, tab filters, offset-shadow buttons and a skills ticker. Headings use Playfair Display, labels use the system monospace font, body text uses Figtree.
 
 ## Features
-Typewriter name and rotating skills line, scroll-progress bar, scroll-spy nav, skills ticker, staggered reveal, animated counters, badge that follows the pointer on desktop, certificate filters with score rings, light and dark mode (remembered), copy buttons, portfolio visitor counter.
+Typewriter name and rotating skills line, scroll-progress bar, scroll-spy nav, skills ticker, staggered reveal, animated counters, badge that follows the pointer on desktop, certificate filters with score rings, copy buttons, portfolio visitor counter.
 
 ## Colours
-From her CV: navy #002B49 and steel blue #005A9C on a soft sky background (#F4F8FC), plus one chart-highlighter amber #E3A02F for small accents. Change them in the `:root` block at the top of `assets/css/style.css` (dark mode is the `[data-theme="dark"]` block under it).
+Sky blue theme: deep sky #0C4A6E (headings), sky #0284C7 / #0369A1 (buttons, links), light sky #F0F9FF (background) and #0EA5E9 for small accents. Change them in the `:root` blocks of `assets/css/style.css` (the last `:root` block wins). There is no dark mode.
 
 ## Add a certificate
-1. Put the PDF in `assets/docs/certificates/` and a 900px-wide .webp preview in `assets/images/certificates/`.
-2. Copy one `<article class="card cert">` in `index.html`. Set `data-cat` (finance, safety, workplace or a new name) and `data-score` if it has a score out of 100.
+1. Put a 900px-wide .webp image of the certificate in `assets/images/certificates/`.
+2. Copy one `<article class="card cert">` in `index.html` and point its link and image to the new .webp. Set `data-cat` (finance, safety, workplace or a new name) and `data-score` if it has a score out of 100.
 3. For a new category, add a button in the `.filters` bar with the same `data-filter` value. Update the "Certificates" counter in About.
 
 ## Portfolio visitors (About section)

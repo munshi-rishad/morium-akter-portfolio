@@ -6,23 +6,6 @@
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
   const fine = matchMedia('(hover: hover) and (pointer: fine)').matches;
 
-  /* ---------- theme (light / dark, remembered) ---------- */
-  const themeBtn = $('#theme');
-  const paintTheme = () => {
-    const dark = root.dataset.theme === 'dark';
-    themeBtn.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
-    themeBtn.querySelector('use').setAttribute('href', dark ? '#i-sun' : '#i-moon');
-    const m = $('meta[name="theme-color"]');
-    if (m) m.content = dark ? '#0A141D' : '#F4F8FC';
-  };
-  themeBtn.addEventListener('click', () => {
-    const next = root.dataset.theme === 'dark' ? 'light' : 'dark';
-    root.dataset.theme = next;
-    try { localStorage.setItem('theme', next); } catch (e) {}
-    paintTheme();
-  });
-  paintTheme();
-
   /* ---------- nav: mobile menu, progress, active link ---------- */
   const nav = $('.nav');
   const burger = $('#burger');
