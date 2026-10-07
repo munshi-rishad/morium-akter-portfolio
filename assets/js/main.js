@@ -67,24 +67,6 @@
     }
   }
 
-  /* ---------- typing line: rotating skills ---------- */
-  const typed = $('#typed');
-  if (typed && !reduce) {
-    const words = ['Analytical Thinking', 'Data Processing', 'Clear Communication', 'MS Office', 'Online Research'];
-    let w = 0, c = 0, del = false;
-    const step = () => {
-      const s = words[w];
-      c += del ? -1 : 1;
-      typed.textContent = s.slice(0, c);
-      let wait = del ? 35 : 75;
-      if (!del && c === s.length) { del = true; wait = 1500; }
-      else if (del && c === 0) { del = false; w = (w + 1) % words.length; wait = 350; }
-      setTimeout(step, wait);
-    };
-    typed.textContent = '';
-    setTimeout(step, 2200); // starts after the name has been typed
-  }
-
   /* ---------- hanging ID badge: follows the pointer, swings freely otherwise ---------- */
   if (fine && !reduce) {
     const bw = $('.badge-wrap');

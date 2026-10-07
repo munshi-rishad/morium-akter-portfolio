@@ -10,13 +10,13 @@ assets/  css/  js/  fonts/  images/  icons/
 ```
 
 ## Design
-"Economics journal" look: graph-paper hero with an animated supply and demand chart, a swinging lanyard ID badge for the photo, ledger-style education rows, an indexed skills list, a single toolbar for tools, tab filters, offset-shadow buttons and a skills ticker. Headings use Playfair Display, labels use the system monospace font, body text uses Figtree.
+"Economics journal" look: graph-paper hero with an animated supply and demand chart, a swinging lanyard ID badge for the photo, ledger-style education rows, an indexed skills list, a single toolbar for tools, tab filters, offset-shadow buttons and a skills ticker. Headings use Newsreader, labels use the system monospace font, body text uses Figtree.
 
 ## Features
 Typewriter name and rotating skills line, scroll-progress bar, scroll-spy nav, skills ticker, staggered reveal, animated counters, badge that follows the pointer on desktop, certificate filters with score rings, copy buttons, portfolio visitor counter.
 
 ## Colours
-Sky blue theme: deep sky #0C4A6E (headings), sky #0284C7 / #0369A1 (buttons, links), light sky #F0F9FF (background) and #0EA5E9 for small accents. Change them in the `:root` blocks of `assets/css/style.css` (the last `:root` block wins). There is no dark mode.
+Flat green theme, no gradients: deep green #134E3A (headings), green #1F7A5A (buttons, links), mint #E8F4EC / #F4FAF6 (backgrounds), #34B27E for small accents. Change them in the `:root` blocks of `assets/css/style.css` (the last `:root` block wins). There is no dark mode.
 
 ## Add a certificate
 1. Put a 900px-wide .webp image of the certificate in `assets/images/certificates/`.
@@ -35,3 +35,7 @@ git add -A && git commit -m "Update" && git push
 Pages: Settings > Pages > `main` / `(root)`.
 
 Personal documents (NID, birth certificate, family, medical, home records) are intentionally not included.
+
+## Advanced features
+Certificate lightbox (arrows, swipe, zoom), quick-jump palette (Ctrl/Cmd+K or the search button), Save contact (.vcf) and Share buttons, 3D tilt on certificates, installable offline app (`manifest.webmanifest`, `sw.js`, https only), schema.org JSON-LD. Code: `assets/js/extra.js`. After editing files, bump `V` in `sw.js`.
+Also: Academic results chart, side section dots, Dhaka local time, message form (mailto), print styles. Colours are the deeper sky blue set in `style.css`.
